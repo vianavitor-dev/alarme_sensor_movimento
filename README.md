@@ -14,7 +14,13 @@ Esta pasta contém o script carregado no ESP32, esquemas de ligação no protobo
 
 ### Back-end (Spring)
 1. Abra o arquivo **./Backend_Frontend/HiveMQCloudConnectionWithSpring** com o editor de texto do seu agrado e execute o arquivo **main** (App.java).
-2. Modifique o arquivo **application.properties** para se conectar com o seu MQTT Broker.
+2. Crie o arquivo **application.properties** (encontrado no diretório **src/main/resources**) para se conectar com o seu MQTT Broker, seguindo o exemplo a baixo.
+~~~ Java
+mqtt.HOST = seu-host
+mqtt.PORT = sua-porta
+mqtt.USERNAME = seu-usuario
+mqtt.PASSWORD = sua-senha
+~~~
 
 ### Front-end
 Abra o arquivo **index.html** disponível em **./Backend_Frontend/HiveMQCloudConnectionFrontend/index.html**.
