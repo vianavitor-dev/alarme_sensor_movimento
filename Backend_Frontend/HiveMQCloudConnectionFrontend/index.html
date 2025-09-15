@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MQTT Client - HiveMQ + Spring Boot</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .alarm-state-on {
+      color: #0CDB50;
+    }
+
+    .alarm-state-off, .msg-alarm-danger{
+      color: #DB100B;
+    }
+
+    .deactivate-alarm.disabled {
+      pointer-events: none; 
+      opacity: .4;
+    }
+
+    #btn-history {
+      background-image: url(/images/download.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding: 2px 2px 2px 14px;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+
+  <div class="container-md py-5 col-12 col-md-8">
+    <h2 class="mb-4">Alarme com Sensor de Movimento</h2>
+    <!-- Publish form -->
+    <div class="card mb-4">
+      <div class="card-header position-relative w-100">
+        Estado do Alarme
+        <div id="alarm-state"
+          class="position-absolute translate-middle-y end-0 bottom-0 alarm-state-off mx-5 fw-semibold">Desligado</div>
+      </div>
+      <div class="card-body">
+
+        <div class="form-check form-switch">
+          <input id="alarm-turn-on" class="form-check-input" type="checkbox" id="mySwitch" role="switch">
+          <label class="form-check-label fw-semibold" for="mySwitch">Ligar Alarme</label>
+        </div>
+
+      <div class="deactivate-alarm disabled">
+        <p class="mt-5">Pressione <span style="color: #DB100B">Desativar</span> para fazer o alarme parar de tocar.</p>
+
+        <button
+          id="btn-turn-off-alarm"
+          type="button"
+          class="btn btn-danger"
+          data-bs-toggle="button"
+          aria-pressed="false"
+          autocomplete="off"
+        >
+          Desativar
+        </button>
+      </div>
+      </div>
+    </div>
+
+    <!-- Messages log -->
+    <div class="card">
+
+      <div class="card-header position-relative w-100">
+        Mensagem mais Recente
+
+        <div class="position-absolute top-50 translate-middle-y end-0 px-2 py-1 mx-1">
+          <button
+            type="button"
+            name="btn-history"
+            id="btn-history"
+            class="btn btn-outline-secondary p-3"
+            title="Baixar histórico de Mensagens"
+          > 
+          </button>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <ul id="messages" class="list-group"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script 
+    src="https://code.jquery.com/jquery-3.7.1.js" 
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous">
+  </script>
+
+  <script type="module" src="scripts/index.js"></script>
+
+</body>
+
+</html>
