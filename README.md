@@ -29,3 +29,4 @@ Abra o arquivo **index.html** disponível em **./Backend_Frontend/HiveMQCloudCon
 Arduino IDE: https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.6_Windows_64bit.exe <br>
 Java 24.0.1: https://www.oracle.com/java/technologies/javase/jdk24-archive-downloads.html <br>
 IntelliJ IDEA Community (IDE Utilizada): https://www.jetbrains.com/idea/download/?section=windows
+Wokwi (Website pra simular o ESP32): https://wokwi.com/
