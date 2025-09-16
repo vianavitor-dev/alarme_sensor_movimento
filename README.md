@@ -1,3 +1,5 @@
+# Alarme com Sensor de Movimento
+
 ## Project Model CANVAS 
 O arquivo "Project Model CANVAS.xlsx" possui os detalhes do projeto: 
  1. Project Model Canvas: Sobre o projeto;
@@ -23,9 +25,9 @@ mqtt.PASSWORD = sua-senha
 ~~~
 
 ### Front-end
-Abra o arquivo **index.html** disponível em **./Backend_Frontend/HiveMQCloudConnectionFrontend/index.html**.
+Abra o arquivo **index.html** disponível em **./Backend_Frontend/HiveMQCloudConnectionFrontend/**.
 
-## Instaladores e Depuradores:
+## Programas utilizados:
 Arduino IDE: https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.6_Windows_64bit.exe <br>
 Java 24.0.1: https://www.oracle.com/java/technologies/javase/jdk24-archive-downloads.html <br>
 IntelliJ IDEA Community (IDE Utilizada): https://www.jetbrains.com/idea/download/?section=windows <br>
